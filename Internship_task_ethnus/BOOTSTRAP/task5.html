@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .input-group-text {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+        }
+        .form-control {
+            border: 1px solid #d9534f;
+        }
+        .input-group .form-control::placeholder {
+            color: #d9534f;
+        }
+        .text-danger {
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="text-center">Registration Form</h2>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" placeholder="First Name" required>
+                    <span class="input-group-text"><i class="bi bi-x"></i></span>
+                </div>
+                <small class="text-danger">Please supply your first name</small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" placeholder="Last Name" required>
+                    <span class="input-group-text"><i class="bi bi-x"></i></span>
+                </div>
+                <small class="text-danger">Please supply your last name</small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">E-Mail</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="E-Mail Address" required>
+                    <span class="input-group-text"><i class="bi bi-x"></i></span>
+                </div>
+                <small class="text-danger">Please supply your email address</small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone #</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                    <input type="text" class="form-control" placeholder="(845)555-1212" required>
+                    <span class="input-group-text"><i class="bi bi-x"></i></span>
+                </div>
+                <small class="text-danger">Please supply your phone number</small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-house"></i></span>
+                    <input type="text" class="form-control" placeholder="Address" required>
+                    <span class="input-group-text"><i class="bi bi-x"></i></span>
+                </div>
+                <small class="text-danger">Please supply your street address</small>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">City</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                    <input type="text" class="form-control" placeholder="City" required>
+                    <span class="input-group-text"><i class="bi bi-x"></i></span>
+                </div>
+                <small class="text-danger">Please supply your city</small>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+        .error-input {
+            border: 2px solid red;
+            background-color: #fff5f5;
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <div class="container w-50 mx-auto">
+        <form id="validationForm">
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" id="name">
+                <div class="error">Name is required</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="email">
+                <div class="error">Email is required</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+                <div class="error">Password is required</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Hobbies</label>
+                <select class="form-control" id="hobbies">
+                    <option value="">Select a hobby</option>
+                    <option>Reading</option>
+                    <option>Gaming</option>
+                    <option>Traveling</option>
+                </select>
+                <div class="error">Please select a hobby</div>
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#validationForm").on("submit", function (event) {
+                event.preventDefault();
+                let isValid = true;
+
+                $("#validationForm input, #validationForm select").each(function () {
+                    if ($(this).val().trim() === "") {
+                        $(this).addClass("error-input");
+                        $(this).next(".error").show();
+                        isValid = false;
+                    } else {
+                        $(this).removeClass("error-input");
+                        $(this).next(".error").hide();
+                    }
+                });
+                if (isValid) {
+                    alert("Form submitted successfully!");
+                }
+            });
+
+            // Remove error on typing/selecting
+            $("#validationForm input, #validationForm select").on("input change", function () {
+                if ($(this).val().trim() !== "") {
+                    $(this).removeClass("error-input");
+                    $(this).next(".error").hide();
+                }
+            });
+        });
+    </script>
+
+    <div class="mt-3 text-center">
+        <button class="btn btn-secondary">
+            <a href="index.html" class="text-white text-decoration-none">Back to Home</a>
+        </button>
+    </div>
+
+</body>
+</html>
