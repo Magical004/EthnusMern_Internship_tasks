@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:  #778ea4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #ff0000;
+        }
+        .sidenav {
+            width: 60px;
+            background-color: #2c3e50;
+            transition: width 0.3s;
+            margin-right: 20px;
+        }
+        .sidenav:hover {
+            width: 200px;
+        }
+        .sidenav a {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .sidenav a:hover {
+            background-color: #34495e;
+        }
+        .sidenav a i {
+            margin-right: 15px;
+            font-size: 20px;
+        }
+        .sidenav a span {
+            display: none;
+        }
+        .sidenav:hover a span {
+            display: inline;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidenav">
+            <a href="#">
+                <i>🏠</i>
+                <span>Home</span>
+            </a>
+            <a href="#">
+                <i>💻</i>
+                <span>Java</span>
+            </a>
+            <a href="#">
+                <i>🎨</i>
+                <span>CSS</span>
+            </a>
+            <a href="#">
+                <i>📄</i>
+                <span>HTML</span>
+            </a>
+            <a href="#">
+                <i>🚀</i>
+                <span>Bootstrap</span>
+            </a>
+        </div>
+        <div>
+            <h1>My first styled page</h1>
+            <p>Welcome to my styled page!</p>
+            <p>It lacks images, but at least it has style. And it has links, even if they don't go anywhere...</p>
+            <p>There should be more here, but I don't know what yet.</p>
+            <p>Made 16 Feb 2025</p>
+            <hr>
+            <div class="footer">
+                <p>© 2025 My Styled Page</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

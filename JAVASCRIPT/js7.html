@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 - Moving Train</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+        }
+        img {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            width: 300px;
+        }
+        .buttons {
+            margin-top: 50px;
+        }
+        button {
+            font-size: 16px;
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="Virat" src="data:image/webp;base64,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" alt="Moving Train">
+    </div>
+
+    <h2>Click the following buttons to handle animation</h2>
+
+    <div class="buttons">
+        <button onclick="startTrain()">Start</button>
+        <button onclick="stopTrain()">Stop</button>
+    </div>
+
+    <script>
+        let train = document.getElementById("train");
+        let position = 0;
+        let speed = 5;
+        let animation;
+
+        function moveTrain() {
+            position += speed;
+            train.style.left = position + "px";
+            if (position > window.innerWidth) {
+                position = -200; // Reset to start
+            }
+            animation = requestAnimationFrame(moveTrain);
+        }
+
+        function startTrain() {
+            if (!animation) {
+                moveTrain();
+            }
+        }
+
+        function stopTrain() {
+            cancelAnimationFrame(animation);
+            animation = null;
+        }
+    </script>
+
+</body>
+</html>
